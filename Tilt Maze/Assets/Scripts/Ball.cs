@@ -16,7 +16,7 @@ public class Ball : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		if (other.name == "Goal") {
-			Destroy (gameObject, 1.0f);
+			Destroy (gameObject, 0.7f);
 			Debug.Log ("You win!");
 		}
 	}
