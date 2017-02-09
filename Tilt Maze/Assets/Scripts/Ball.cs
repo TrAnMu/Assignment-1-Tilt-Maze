@@ -13,11 +13,15 @@ public class Ball : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (rb.isKinematic == true) {
-			transform.Translate (Vector3.up * Time.deltaTime, Space.World);
+			transform.Translate (Vector3.up * Time.deltaTime * 8.0f, Space.World);
 		}
 
-		if (Input.GetKey ()) {
+		if (Input.GetKeyDown (KeyCode.Q)) {
+			Application.Quit ();
+		}
 
+		if (Input.GetKeyDown (KeyCode.R)) {
+			UnityEngine.SceneManagement.SceneManager.LoadScene (0);
 		}
 	}
 
